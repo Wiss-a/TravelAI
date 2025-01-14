@@ -58,7 +58,7 @@ def reset_user_data():
     return "Hello! What is your budget for this trip?"
 
 import google.generativeai as genai
-GEMINI_API_KEY = "AIzaSyAo7TQE4VJkjJmXFCcsafSTH8HQKfozRFM"
+GEMINI_API_KEY = "GEMINI_API"
 
 genai.configure(api_key=GEMINI_API_KEY)
 
@@ -75,7 +75,7 @@ def fetch_flights_serpapi(destination, date):
         "location_requested": {user_data.user.departure},
         "hl": "en",
         "gl": "us",
-        "api_key": "93109e2809fa462dc75ad39c8c5652fcc3c0b8d242f6e133635e7ac8218d6b96"  # Replace with your SerpAPI key
+        "api_key": "SERPAPI_KEY"  # Replace with your SerpAPI key
     }
 
     search = GoogleSearch(params)
@@ -107,7 +107,7 @@ def fetch_hotels_serpapi(destination, budget):
         "q": query,
         "hl": "en",
         "gl": "us",
-        "api_key": "93109e2809fa462dc75ad39c8c5652fcc3c0b8d242f6e133635e7ac8218d6b96"
+        "api_key": "SERPAPI_KEY"
     }
     search = GoogleSearch(params)
 
