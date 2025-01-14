@@ -41,6 +41,18 @@ export default function ChatPage() {
   useEffect(() => {
     fetchInitialMessage();
   }, []);
+useEffect(() => {
+  const resetBackendState = async () => {
+    await fetch("http://127.0.0.1:8000/api/reset", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+  };
+
+  resetBackendState();
+}, []);
 
   // Handle sending the message to the backend
   const handleSend = async () => {
