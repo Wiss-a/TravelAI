@@ -1,0 +1,202 @@
+
+body {
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  line-height: 1.6;
+  overflow: hidden; 
+}
+
+
+.learn-page {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.spline-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.spline-background canvas {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.content-overlay {
+  position: relative;
+  z-index: 2;
+  color: #ffffff;
+  text-align: center;
+  width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+
+.learn-header {
+  text-align: center;
+  margin-bottom: 50px;
+  animation: slideInFromTop 2s ease-in-out;
+  margin-left: 12cm;
+}
+
+.learn-header h1 {
+  font-size: 3rem;
+  color: #ffffff;
+  margin-bottom: 10px;
+  animation: revealText 2.5s ease-in-out forwards;
+}
+
+.learn-header p {
+  font-size: 1.2rem;
+  color: #dcdcdc;
+  animation: revealText 2.5s ease-in-out forwards;
+  animation-delay: 0.5s;
+}
+
+
+.learn-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 40px;
+  width: 80%;
+  max-width: 1200px;
+  justify-content: center;
+  align-items: start;
+  margin-left: 10cm;
+}
+
+
+.learn-section {
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  color: #ffffff;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideInUp 1s ease-in-out forwards;
+}
+
+.learn-section:nth-child(1) {
+  grid-column: 1;
+  grid-row: 1;
+  animation-delay: 0.2s;
+}
+
+.learn-section:nth-child(2) {
+  grid-column: 2;
+  grid-row: 1;
+  animation-delay: 0.4s;
+}
+
+.learn-section:nth-child(3) {
+  grid-column: 2;
+  grid-row: 2;
+  animation-delay: 0.6s;
+}
+
+.learn-section:nth-child(4) {
+  grid-column: 1;
+  grid-row: 2;
+  animation-delay: 0.8s;
+}
+
+
+.cta-button {
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  animation: bounce 2s infinite;
+}
+
+.cta-button:hover {
+  background-color: #2980b9;
+  transform: scale(1.1);
+}
+
+
+.learn-footer {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #dcdcdc;
+  margin-top: 30px;
+  animation: fadeIn 2s ease-in-out;
+  animation-delay: 1.5s;
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromTop {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes revealText {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
