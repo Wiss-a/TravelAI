@@ -1,0 +1,29 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(180deg, #000000, #1a1a1a);
+  color: white;
+  font-family: 'Arial', sans-serif;
+  overflow: hidden;
+}
+
+  .app-header {
+    text-align: center;
+    margin: 20px;
+  }
+  
+  .header-title {
+    font-size: 2.5rem;
+  }
+  
+  .header-subtitle {
+    font-size: 1.2rem;
+  }
+  
+  .app-main {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
